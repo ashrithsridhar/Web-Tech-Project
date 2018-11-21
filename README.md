@@ -7,8 +7,9 @@ project assigned by -
 		Dr.Oshin Sharma
 
 
-team members - 
-	1)PRUTHVISH E 
+team members -
+
+	1)PRUTHVISH E
 		srn - PES1201701629
 
   	2)VAIBHAV K T 
