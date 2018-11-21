@@ -61,7 +61,7 @@ if(isset($_POST['signup'])){
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>LOGIN-pruthvish</title>
+	<title>LOGIN</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500,600" rel="stylesheet">
 		<!--

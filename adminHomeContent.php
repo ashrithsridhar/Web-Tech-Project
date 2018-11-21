@@ -1,4 +1,5 @@
-<?php//subjects
+<?php
+//subjects
 $subjects_result = mysqli_query($conn,'SELECT * FROM subjects');
 $subjects = mysqli_fetch_all($subjects_result, MYSQLI_ASSOC);
 	if(isset($_POST['add_subject'])){
@@ -30,6 +31,7 @@ $tests = mysqli_fetch_all($tests_result, MYSQLI_ASSOC);
 $searchusers_result = mysqli_query($conn,'SELECT * FROM users');
 $usernames = mysqli_fetch_all($searchusers_result, MYSQLI_ASSOC);
 
+//settings
 
 ?>
 
@@ -56,7 +58,6 @@ $usernames = mysqli_fetch_all($searchusers_result, MYSQLI_ASSOC);
                 <th>Start Time</th>
                 <th>End Time</th>
                 <th>Add Questions</th>
-								
             </tr>
         </thead>
         <tbody>
@@ -67,7 +68,8 @@ $usernames = mysqli_fetch_all($searchusers_result, MYSQLI_ASSOC);
                         <td><?php echo $test['sdatetime']; ?></td>
                         <td><?php echo $test['edatetime']; ?></td>
                         <td><a href='editTest.php?var=<?php echo $test['test_id']; ?> ' class="btn btn-primary">Add Question</a></td>
-								</tr>
+												
+                    </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
@@ -100,14 +102,8 @@ $usernames = mysqli_fetch_all($searchusers_result, MYSQLI_ASSOC);
 		<div class="form-group">
 			<input class="form-control" type="number" name="attempts" placeholder="No of attempts allowed" style="width: 300px;">
 		</div>
-		<div class="form-group">
-	     	<select name="yes_no" class="form-control" id="sel1" style="width: 300px;">
-	     		<option disabled>Show Immediate Results</option>
-	     		<option>Yes</option>
-	     		<option>No</option>
-	      </select>
-	    </div>
-      	<p>*To show Immediate Results</p><br>
+      	<br>
 		<input type="submit" name="add_test" value="Create Test" class="btn btn-danger" style="height: 40px; width:300px;">
 </form>
 </div>
+
